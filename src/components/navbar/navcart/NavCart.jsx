@@ -1,4 +1,6 @@
+import CartContent from "./cartcontent/CartContent";
 import { Badge } from "@mui/material";
+import Pay from "./Pay";
 
 const NavCart = () => {
   return (
@@ -33,8 +35,9 @@ const NavCart = () => {
             aria-label="Close"
           ></button>
         </div>
-        <div className="offcanvas-body">
-            Tu carrito está vacío
+        <div className="offcanvas-body d-flex flex-column">
+          <CartContent />
+          <Pay />
         </div>
       </div>
     </>

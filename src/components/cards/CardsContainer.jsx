@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Cards from "./Cards";
 import axios from "axios";
 import { Box } from "@mui/material";
+import AddButton from "./AddButton";
 
 const CardsContainer = () => {
   const [products, setProducts] = useState([]);
@@ -18,7 +19,7 @@ const CardsContainer = () => {
 
   useEffect(() => {
     apiData();
-  },[]);
+  }, []);
 
   return (
     <Box
@@ -29,19 +30,20 @@ const CardsContainer = () => {
         alignItems: "center",
         flexWrap: "wrap",
         gap: 2,
-        mb: 3
+        mb: 3,
       }}
     >
       {products.map((producto) => {
         return (
-          <Cards
-            key={producto.id}
-            title={producto.title}
-            price={producto.price}
-            category={producto.category}
-            description={producto.description}
-            image={producto.image}
-          />
+            <Cards
+              key={producto.id}
+              title={producto.title}
+              price={producto.price}
+              category={producto.category}
+              description={producto.description}
+              image={producto.image}
+              producto={producto}
+            />
         );
       })}
     </Box>
@@ -49,5 +51,3 @@ const CardsContainer = () => {
 };
 
 export default CardsContainer;
-
-

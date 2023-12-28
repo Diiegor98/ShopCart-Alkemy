@@ -3,8 +3,9 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import "./cards.css";
 import { Divider } from "@mui/material";
+import AddButton from "./AddButton";
 
-export default function Cards({ title, price, image, category }) {
+export default function Cards({ title, price, image, category, producto }) {
   return (
     <Card
       variant="outlined"
@@ -45,8 +46,7 @@ export default function Cards({ title, price, image, category }) {
           >
             ${price}
           </Typography>
-          <button onClick={() => {alert('Producto agregado')}} type="button" className="btn btn-primary"><i className="bi bi-cart-plus"></i></button>
-          
+          <AddButton producto={producto}/>
         </div>
       </CardContent>
     </Card>

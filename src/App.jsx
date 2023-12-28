@@ -1,5 +1,6 @@
 //Componentes
 import UserProvider from "./components/contexts/UserProvider";
+import CartProvider from "./components/contexts/CartProvider";
 import NavBar from "./components/navbar/NavBar";
 import Carousel from "./components/carousel/Carousel";
 import CardsContainer from "./components/cards/CardsContainer";
@@ -16,10 +17,12 @@ function App() {
     <UserProvider>
       {login ? (
         <div>
-          <NavBar />
-          <Carousel />
-          <Divider sx={{margin: 1}}/>
-          <CardsContainer />
+          <CartProvider>
+            <NavBar />
+            <Carousel />
+            <Divider sx={{ margin: 1 }} />
+            <CardsContainer />
+          </CartProvider>
         </div>
       ) : (
         <Login login={setLogin} />
