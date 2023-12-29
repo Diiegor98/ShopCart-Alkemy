@@ -1,11 +1,18 @@
 import CartContent from "./cartcontent/CartContent";
+import { useContext } from "react";
+import { useState } from "react";
 import { Badge } from "@mui/material";
+import CartContext from "../../contexts/CartContext";
 import Pay from "./Pay";
 
 const NavCart = () => {
+
+  const [showpay, setShowpay] = useState(true);
+  const { cart } = useContext(CartContext);
+
   return (
     <>
-      <Badge badgeContent={0} color="error">
+      <Badge badgeContent={cart.length} color="error">
         <button
           className="btn btn-light position-relative"
           type="button"
@@ -36,8 +43,7 @@ const NavCart = () => {
           ></button>
         </div>
         <div className="offcanvas-body d-flex flex-column">
-          <CartContent />
-          <Pay />
+          {showpay ? <CartContent showpay={setShowpay} /> : <Pay />}
         </div>
       </div>
     </>

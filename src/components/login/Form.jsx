@@ -5,7 +5,7 @@ import UserContext from "../contexts/UserContext";
 const Form = ({ login }) => {
   const [name, setName] = useContext(UserContext);
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleNameChange = (event) => {
     setName(event.target.value);

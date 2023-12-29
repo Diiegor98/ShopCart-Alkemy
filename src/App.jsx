@@ -5,6 +5,7 @@ import NavBar from "./components/navbar/NavBar";
 import Carousel from "./components/carousel/Carousel";
 import CardsContainer from "./components/cards/CardsContainer";
 import Login from "./components/login/Login";
+import Footer from "./components/footer/Footer";
 //Hooks
 import { useState } from "react";
 //MUI
@@ -22,6 +23,7 @@ function App() {
             <Carousel />
             <Divider sx={{ margin: 1 }} />
             <CardsContainer />
+            <Footer />
           </CartProvider>
         </div>
       ) : (

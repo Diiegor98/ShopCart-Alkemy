@@ -1,0 +1,34 @@
+.footer{
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #1976d2;
+  }
+  
+.seccion-texto{
+    color: white;
+    font-size: 1.1em;
+}
+
+  .contact-icons{
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+  }
+  
+  .contact-icons a i{
+    color:#ffffff;
+    font-size: 1.8rem;
+  }
+  
+  .contact-icons a i:hover, .contact-icons button:hover{
+    color:#c9c8c8;
+  }
+  
+  .derechos-de-autor{
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+  }

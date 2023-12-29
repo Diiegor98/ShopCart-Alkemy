@@ -15,6 +15,12 @@ const CartItem = ({ title, price, image, category }) => {
     }
   };
 
+  const totalPriceItem = () =>{
+    console.log((price * count).toFixed(2))
+    return (price * count).toFixed(2);
+  }
+
+
   return (
     <div className="item">
       <img src={image} alt={title} />
@@ -32,7 +38,7 @@ const CartItem = ({ title, price, image, category }) => {
           -
         </button>
       </div>
-      <span className="i-price">${(price * count).toFixed(2)}</span>
+      <span className="i-price">${totalPriceItem()}</span>
     </div>
   );
 };
