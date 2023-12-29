@@ -4,7 +4,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { useContext } from "react";
 import UserContext from "../contexts/UserContext";
-import NavCart from "./NavCart/NavCart";
+import NavCart from "./navcart/NavCart";
 
 
 export default function NavBar() {
