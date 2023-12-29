@@ -25,7 +25,7 @@ const Form = ({ login }) => {
       <form className="form" onSubmit={handleSubmit}>
         <span className="title">
           ShopCart| DR{" "}
-          <img src="../../public/navbar-logo.png" alt="Logo carro" />
+          <img src="https://cdn-icons-png.flaticon.com/128/1710/1710433.png?semt=ais" alt="Logo carro" />
         </span>
         <span className="subtitle">Iniciá sesión para ver los productos.</span>
         {error ? (
